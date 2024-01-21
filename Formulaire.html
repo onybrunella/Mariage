@@ -18,7 +18,7 @@
 </header>
 <!--Menu-->
 <nav class="menu">
-    <a href="Index.html">Accueil</a>
+    <a href="index.html">Accueil</a>
     <a href="Galerie_Photo.html">Galerie Photo</a>
     <a href="Programme.html">Programme</a>
     <a class ="menu-active" href="Formulaire.html">Formulaire</a>
@@ -77,8 +77,9 @@
 
     <div class="pays">
         <label for="pays">De quel pays venez-vous ?</label>
-        <input type="checkbox" name="pays" /> <label for="pays">France</label>
-        <input type="checkbox" name="pays" /> <label for="pays">Madagascar</label>
+        <input type="checkbox" name="pays" id="pays-checkbox" aria-label="France" /> <label for="pays-checkbox">France</label>
+        <label for="pays">Madagascar</label>
+        <input type="checkbox" name="pays" aria-label="Madagascar" />
     </div>
 
     <div class="handicap">
@@ -89,10 +90,11 @@
 
     <div class="handicap-check">
         <label for="handicap-check">Si oui, de quelle type ? (si vous êtes atteint de poly ou plurihandicap, veuillez cocher tous les types correspondant)</label>
-        <input type="checkbox" name="handicap-check" /> <label for="handicap-check">Le handicap moteur</label>
-        <input type="checkbox" name="handicap-check" /> <label for="handicap-check">Le handicap auditif</label>
-        <input type="checkbox" name="handicap-check" /> <label for="handicap-check">Le handicap visuel</label>
-        <input type="checkbox" name="handicap-check" /> <label for="handicap-check">Le handicap cognitif / mental / psychique</label>
+        <input type="checkbox" name="handicap-check" id="handicap-check" aria-label="Le handicap moteur" /> <label for="handicap-check">Le handicap moteur</label>
+        <input type="checkbox" name="handicap-check" id="handicap-check" aria-label="Le handicap auditif" /> <label for="handicap-check">Le handicap auditif</label>
+        <input type="checkbox" name="handicap-check" id="handicap-check" aria-label="Le handicap visuel" /> <label for="handicap-check">Le handicap visuel</label>
+        <label for="handicap-check">Le handicap cognitif / mental / psychique</label>
+        <input type="checkbox" name="handicap-check" aria-label="Le handicap cognitif / mental / psychique" />
     </div>
     <div class="PS"><label for="PS">PS: Le lieu de la fête a la capacité d'accueilir les personnes à mobilité réduite !</label></div>
 
@@ -160,50 +162,59 @@
 
     <div class="alimentaire">
         <label for="alimentaire">Quelle régime alimentaire adoptez-vous ?</label>
-        <input type="checkbox" name="alimentaire" /> <label for="alimentaire">Le véganisme</label>
-        <input type="checkbox" name="alimentaire" /> <label for="alimentaire">Le végétalisme</label>
-        <input type="checkbox" name="alimentaire" /> <label for="alimentaire">Le végétarisme</label>
-        <input type="checkbox" name="alimentaire" /> <label for="alimentaire">Le pesco-végétarisme</label>
-        <input type="checkbox" name="alimentaire" /> <label for="alimentaire">Le pescétarisme</label>
-        <input type="checkbox" name="alimentaire" /> <label for="alimentaire">Le flexitarisme</label>
-        <input type="checkbox" name="alimentaire" /> <label for="alimentaire">Sans lactose</label>
-        <input type="checkbox" name="alimentaire" /> <label for="alimentaire">Sans gluten</label>
-        <input type="checkbox" name="alimentaire" /> <label for="alimentaire">Cétogène</label>
+        <input type="checkbox" id="alimentaire" name="alimentaire" aria-label="Le véganisme" /> <label for="alimentaire">Le véganisme</label>
+        <input type="checkbox" name="alimentaire" id="alimentaire-checkbox"/> <label for="alimentaire-checkbox">Le végétalisme</label>
+        <div class="alimentaire">
+            <label for="alimentaire">Quelle régime alimentaire adoptez-vous ?</label>
+            <input type="checkbox" id="alimentaire" name="alimentaire" aria-label="Le véganisme" /> <label for="alimentaire">Le véganisme</label>
+            <input type="checkbox" name="alimentaire" id="alimentaire-checkbox" aria-label="Le végétarisme" /> <label for="alimentaire-checkbox">Le végétarisme</label>
+            <input type="checkbox" name="alimentaire" aria-label="Le pesco-végétarisme" /> <label for="alimentaire">Le pesco-végétarisme</label>
+            <input type="checkbox" name="alimentaire" aria-label="Le pescétarisme" /> <label for="alimentaire">Le pescétarisme</label>
+            <input type="checkbox" name="alimentaire" aria-label="Le flexitarisme" /> <label for="alimentaire">Le flexitarisme</label>
+            <input type="checkbox" name="alimentaire" aria-label="Sans lactose" /> <label for="alimentaire">Sans lactose</label>
+            <input type="checkbox" name="alimentaire" aria-label="Sans gluten" /> <label for="alimentaire">Sans gluten</label>
+            <input type="checkbox" name="alimentaire" aria-label="Cétogène" /> <label for="alimentaire">Cétogène</label>
+        </div>
     </div>
 
 
     <div class="hebergement">
         <label for="hébergement">Auriez-vous besoin d'un hébergement ?</label>
-        <input type="radio" name="hebergement" value="oui" /> <label for="hébergement">Oui</label>
-        <input type="radio" name="hebergement" value="non" /> <label for="hébergement">Non</label>
+        <input type="radio" name="hebergement" value="oui" aria-label="Oui" />
+        <input type="radio" name="hebergement" value="non" aria-label="Non" />
     </div>
 
     <div class="hebergement_number">
         <label for="hébergement">Si oui, pour combien de personnes ?</label>
-        <input type="number" name="hebergement_number" value="0" min="0" max="100" step="1"/>
+        <input type="number" name="hebergement_number" value="0" min="0" max="100" step="1" aria-label="Nombre de personnes pour l'hébergement" />
     </div>
 
     <div class="halal">
         <label for="halal">Consommez-vous des aliments de type halal ?</label>
-        <input type="radio" name="halal" value="oui" /> <label for="halal">Oui</label>
-        <input type="radio" name="halal" value="non" /> <label for="halal">Non</label>
+        <input type="radio" name="halal" value="oui" aria-label="Oui" />
+        <input type="radio" name="halal" value="non" aria-label="Non" />
     </div>
 
     <div class="halal_accompagnateur">
         <label for="halal_accompagnateur">Votre ou vos personnes accompagnateurs consomment-il des aliments de type halal ?</label>
-        <input type="radio" name="halal_accompagnateur" value="oui" /> <label for="halal_accompagnateur">Oui</label>
-        <input type="radio" name="halal_accompagnateur" value="non" /> <label for="halal_accompagnateur">Non</label>
+        <label for="halal_accompagnateur">Oui</label>
+        <input type="radio" name="halal_accompagnateur" value="oui" aria-label="Oui" />
+        <label for="halal_accompagnateur">Non</label>
+        <input type="radio" name="halal_accompagnateur" value="non" aria-label="Non" />
     </div>
 
     <div class="voiture">
         <label for="voiture">Auriez-vous besoin d'un véhicule pour se rendre à la réception ?</label>
-        <input type="radio" name="voiture" value="oui" /> <label for="voiture">Oui</label>
-        <input type="radio" name="voiture" value="non" /> <label for="voiture">Non</label>
+        <label for="voiture">Oui</label>
+        <input type="radio" name="voiture" value="oui" aria-label="Oui" />
+        <label for="voiture">Non</label>
+        <input type="radio" name="voiture" value="non" aria-label="Non" />
     </div>
 
     <div class="voiture_number">
         <label for="voiture_number">Si oui, pour combien de personnes ?</label>
-        <input type="number" name="voiture_number" value="0" min="0" max="10" step="1"/>
+        <label for="voiture_number">Si oui, pour combien de personnes ?</label>
+        <input type="number" name="voiture_number" value="0" min="0" max="10" step="1" aria-label="Nombre de personnes pour la voiture"/>
     </div>
 
     <div>
